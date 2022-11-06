@@ -1,0 +1,16 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block field_sets %}
+{% for fieldset in adminform %}
+
+  {% if forloop.first and user.has_usable_password %}
+    {% include "admin/includes/fieldset.html" %}
+  {% endif %}
+ 
+  {% if not forloop.first %}
+     {% include "admin/includes/fieldset.html" %}
+  {% endif %}
+
+{% endfor %}
+{% endblock %}
