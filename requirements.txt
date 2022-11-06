@@ -17,9 +17,11 @@ coreschema==0.0.4
 cryptography==38.0.1
 defusedxml==0.7.1
 distlib==0.3.4
+dj-database-url==1.0.0
 Django==4.0.3
 django-cors-headers==3.13.0
 django-environ==0.8.1
+django-heroku==0.3.1
 django-jazzmin==2.6.0
 django-templated-mail==1.1.1
 django-use-email-as-username==1.2.0
