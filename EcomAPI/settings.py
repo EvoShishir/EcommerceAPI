@@ -242,5 +242,5 @@ MEDIA_URL = "/images/"
 if os.getcwd() == '/app':
     DEBUG = False
 
-# import django_heroku
-# django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
