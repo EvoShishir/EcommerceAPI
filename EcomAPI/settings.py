@@ -59,6 +59,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+
     "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
 
@@ -70,7 +72,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "EcomAPI.urls"
@@ -92,6 +93,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "EcomAPI.wsgi.application"
+
+CSRF_TRUSTED_ORIGINS = ['https://*.ecomapibyshishir.up.railway.app','https://*.127.0.0.1']
 
 
 # Database
@@ -172,11 +175,11 @@ REST_FRAMEWORK = {
     ),
 }
 
-# CORS_ALLOWED_ORIGINS  = [
-# "http://localhost:8000",
-# ]
+CORS_ALLOWED_ORIGINS  = [
+"http://localhost:8000",
+"https://ecomapibyshishir.up.railway.app",
+]
 
-CORS_ALLOW_ALL_ORIGINS: True
 
 CORS_ALLOW_METHODS = [
     "GET",
@@ -236,5 +239,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 MEDIA_URL = "/images/"
 
 
-# if os.getcwd() == '/app':
-#     DEBUG = False
+if os.getcwd() == '/app':
+    DEBUG = False
