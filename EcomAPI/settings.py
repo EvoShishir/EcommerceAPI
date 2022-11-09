@@ -160,11 +160,13 @@ REST_FRAMEWORK = {
     ),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-    "https://ecomapibyshishir.up.railway.app",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:8000",
+#     "https://ecomapibyshishir.up.railway.app",
+#     "https://ecomapibyshishir.up.railway.app/swagger",
+# ]
 
+CORS_ALLOW_ALL_ORIGINS: True
 
 CORS_ALLOW_METHODS = [
     "GET",
